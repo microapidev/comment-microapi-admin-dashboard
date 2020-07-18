@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b41367d31b730a9fdb24371e72f7cc98",
+    "revision": "80d7c3dd7a620978488a48e8326956a7",
     "url": "/comment-microapi-admin-dashboard/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/comment-microapi-admin-dashboard/static/js/2.76b217c1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2a8f51f50c6b1bb4cab2",
-    "url": "/comment-microapi-admin-dashboard/static/js/main.79d51368.chunk.js"
+    "revision": "c8816c9038ac06ebcb06",
+    "url": "/comment-microapi-admin-dashboard/static/js/main.1b0ae88c.chunk.js"
   },
   {
     "revision": "87269b1f1f7651fa0b09",
