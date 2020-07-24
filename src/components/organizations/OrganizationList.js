@@ -9,11 +9,9 @@ const OrganizationList = (props) => {
     <List label="Admins" {...props}>
       {isSmall ? (
         <SimpleList
-          primaryText={(record) => record.title}
-          secondaryText={(record) => `${record.views} views`}
-          tertiaryText={(record) =>
-            new Date(record.published_at).toLocaleDateString()
-          }
+          linkType="show"
+          primaryText={(record) => record.organizationName}
+          secondaryText={(record) => `${record.organizationId}`}
         />
       ) : (
         <Datagrid rowClick="show">

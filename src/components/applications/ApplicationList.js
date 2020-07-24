@@ -25,6 +25,7 @@ const ApplicationList = (props) => {
     >
       {isSmall ? (
         <SimpleList
+          linkType="show"
           primaryText={(record) => record.applicationName}
           secondaryText={(record) => record.orgId}
           tertiaryText={(record) => record.organizationName}
@@ -34,6 +35,7 @@ const ApplicationList = (props) => {
           <TextField source="id" />
           <TextField label="Name" source="applicationName" />
           <ReferenceField
+            link="show"
             label="Organization"
             source="orgId"
             reference="Organizations"

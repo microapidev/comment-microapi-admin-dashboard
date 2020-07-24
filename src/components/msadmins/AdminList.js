@@ -9,6 +9,7 @@ const AdminList = (props) => {
     <List label="Admins" title="Admins" {...props}>
       {isSmall ? (
         <SimpleList
+          linkType="show"
           primaryText={(record) => record.fullname}
           secondaryText={(record) => record.email}
           tertiaryText={(record) => record.role}

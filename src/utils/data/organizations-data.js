@@ -1,12 +1,8 @@
 const getOrganizationsData = (data) => {
   let mappedData = data;
 
-  if (data instanceof Array && data[0].organizationId) {
-    mappedData = data.map(mapOrganizationIdToId);
-  }
-
-  if (data instanceof Object && data.organizationId) {
-    mappedData = mapOrganizationIdToId(data);
+  if (Array.isArray(data.records) && data.records[0].organizationId) {
+    mappedData = data.records.map(mapOrganizationIdToId);
   }
 
   return mappedData;

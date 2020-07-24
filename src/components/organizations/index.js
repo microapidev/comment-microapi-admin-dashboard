@@ -1,9 +1,9 @@
 import OrganizationList from "./OrganizationList";
 import OrganizationShow from "./OrganizationShow";
-import UserIcon from "@material-ui/icons/Group";
+import OrganizationIcon from "@material-ui/icons/Business";
 
 export default {
   list: OrganizationList,
   show: OrganizationShow,
-  icon: UserIcon,
+  icon: OrganizationIcon,
 };
