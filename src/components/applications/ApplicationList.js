@@ -32,8 +32,8 @@ const ApplicationList = (props) => {
         />
       ) : (
         <Datagrid rowClick="show">
-          <TextField source="id" />
           <TextField label="Name" source="applicationName" />
+          <TextField label="ID" source="id" />
           <ReferenceField
             link="show"
             label="Organization"

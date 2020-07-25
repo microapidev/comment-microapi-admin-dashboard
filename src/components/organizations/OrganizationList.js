@@ -1,12 +1,21 @@
 import React from "react";
 import { useMediaQuery } from "@material-ui/core";
-import { List, Datagrid, TextField, SimpleList } from "react-admin";
+import { List, Datagrid, TextField, SimpleList, Pagination } from "react-admin";
+
+const OrganizationPagination = (props) => (
+  <Pagination rowsPerPageOptions={[10, 25, 50]} {...props} />
+);
 
 const OrganizationList = (props) => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   return (
-    <List label="Admins" {...props}>
+    <List
+      label="Organizations"
+      title="Organizations"
+      pagination={<OrganizationPagination />}
+      {...props}
+    >
       {isSmall ? (
         <SimpleList
           linkType="show"
@@ -15,8 +24,8 @@ const OrganizationList = (props) => {
         />
       ) : (
         <Datagrid rowClick="show">
-          <TextField source="organizationId" />
-          <TextField source="organizationName" />
+          <TextField label="Name" source="organizationName" />
+          <TextField label="ID" source="id" />
         </Datagrid>
       )}
     </List>

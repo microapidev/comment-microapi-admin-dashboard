@@ -16,8 +16,8 @@ const AdminList = (props) => {
         />
       ) : (
         <Datagrid rowClick="show" isRowSelectable={(record) => false}>
-          <TextField source="id" />
-          <TextField source="fullname" />
+          <TextField label="Name" source="fullname" />
+          <TextField label="ID" source="id" />
           <EmailField source="email" />
           <TextField source="role" />
         </Datagrid>
