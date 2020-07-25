@@ -14,15 +14,10 @@ const PlanCreate = (props) => {
     <Create label="Create" title="Create a Plan" {...props}>
       <SimpleForm redirect="show">
         <TextInput label="Name" source="name" validate={[required()]} />
-        <BooleanInput
-          label="Logging"
-          source="logging"
-          validate={[required()]}
-        />
+        <BooleanInput label="Logging" source="logging" />
         <NumberInput
           label="Maximum Log Retention Period (Days)"
           source="maxLogRetentionPeriod"
-          validate={[required()]}
         />
         <SelectInput
           source="periodWeight"
@@ -36,12 +31,10 @@ const PlanCreate = (props) => {
         <NumberInput
           label="Maximum requests per day"
           source="maxRequestPerDay"
-          validate={[required()]}
         />
         <NumberInput
           label="Maximum requests per minute"
           source="maxRequestPerMin"
-          validate={[required()]}
         />
       </SimpleForm>
     </Create>
