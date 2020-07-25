@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/comment-microapi-admin-dashboard/static/js/main.824982fc.chunk.js",
-    "main.js.map": "/comment-microapi-admin-dashboard/static/js/main.824982fc.chunk.js.map",
+    "main.js": "/comment-microapi-admin-dashboard/static/js/main.f00a1073.chunk.js",
+    "main.js.map": "/comment-microapi-admin-dashboard/static/js/main.f00a1073.chunk.js.map",
     "runtime-main.js": "/comment-microapi-admin-dashboard/static/js/runtime-main.40fe0b3d.js",
     "runtime-main.js.map": "/comment-microapi-admin-dashboard/static/js/runtime-main.40fe0b3d.js.map",
-    "static/js/2.a6d342fa.chunk.js": "/comment-microapi-admin-dashboard/static/js/2.a6d342fa.chunk.js",
-    "static/js/2.a6d342fa.chunk.js.map": "/comment-microapi-admin-dashboard/static/js/2.a6d342fa.chunk.js.map",
+    "static/js/2.d99979ae.chunk.js": "/comment-microapi-admin-dashboard/static/js/2.d99979ae.chunk.js",
+    "static/js/2.d99979ae.chunk.js.map": "/comment-microapi-admin-dashboard/static/js/2.d99979ae.chunk.js.map",
     "index.html": "/comment-microapi-admin-dashboard/index.html",
-    "precache-manifest.dca3baa089a5974ff8ee3b488327ba10.js": "/comment-microapi-admin-dashboard/precache-manifest.dca3baa089a5974ff8ee3b488327ba10.js",
+    "precache-manifest.1960674361114fff81ae448ebdad9b4d.js": "/comment-microapi-admin-dashboard/precache-manifest.1960674361114fff81ae448ebdad9b4d.js",
     "service-worker.js": "/comment-microapi-admin-dashboard/service-worker.js",
-    "static/js/2.a6d342fa.chunk.js.LICENSE.txt": "/comment-microapi-admin-dashboard/static/js/2.a6d342fa.chunk.js.LICENSE.txt"
+    "static/js/2.d99979ae.chunk.js.LICENSE.txt": "/comment-microapi-admin-dashboard/static/js/2.d99979ae.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.40fe0b3d.js",
-    "static/js/2.a6d342fa.chunk.js",
-    "static/js/main.824982fc.chunk.js"
+    "static/js/2.d99979ae.chunk.js",
+    "static/js/main.f00a1073.chunk.js"
   ]
 }
