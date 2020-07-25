@@ -85,7 +85,7 @@ export default {
 
   delete: (resource, params) => {
     const endpoint = endpoints(DELETE, resource, params);
-    httpClient(endpoint.url, {
+    return httpClient(endpoint.url, {
       method: "DELETE",
     }).then(({ json }) => ({
       data: endpoint.getData(json.data),
