@@ -1,5 +1,11 @@
 import getData from "../../utils/data/organizations-data";
-import { GET_ONE, GET_LIST, GET_MANY, GET_MANY_REFERENCE } from "react-admin";
+import {
+  GET_ONE,
+  GET_LIST,
+  GET_MANY,
+  GET_MANY_REFERENCE,
+  DELETE,
+} from "react-admin";
 
 const apiUrl = "https://comments-microservice.herokuapp.com/v1";
 
@@ -13,6 +19,7 @@ export default (type, params) => {
         getData: getData,
       };
     case GET_ONE:
+    case DELETE:
       return {
         url: `${apiUrl}/msadmins/organizations/${params.id}`,
         getData: getData,
