@@ -29,7 +29,9 @@ export default {
     return httpClient(`${endpoint.url}?${stringify(query)}`).then(
       ({ json }) => ({
         data: endpoint.getData(json.data),
-        total: json.data.pageInfo.totalRecord,
+        total: json.data.pageInfo
+          ? json.data.pageInfo.totalRecord
+          : json.data.length,
       })
     );
   },
