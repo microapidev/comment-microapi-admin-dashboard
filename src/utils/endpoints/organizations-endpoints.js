@@ -12,11 +12,17 @@ const apiUrl = "https://comments-microservice.herokuapp.com/v1";
 export default (type, params) => {
   switch (type) {
     case GET_MANY:
-    case GET_MANY_REFERENCE:
     case GET_LIST:
       return {
         url: `${apiUrl}/msadmins/organizations`,
         getData: getData,
+      };
+    case GET_MANY_REFERENCE:
+      return {
+        url: `${apiUrl}/msadmins/organizations`,
+        getData: (data) => {
+          return getData(data, params.target, params.id);
+        },
       };
     case GET_ONE:
     case DELETE:

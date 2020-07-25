@@ -40,7 +40,7 @@ const ApplicationList = (props) => {
             source="orgId"
             reference="Organizations"
           >
-            <TextField source="organizationName" />
+            <TextField label="Organization Name" source="organizationName" />
           </ReferenceField>
         </Datagrid>
       )}

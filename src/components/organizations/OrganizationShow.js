@@ -38,7 +38,7 @@ const OrganizationShow = (props) => {
             link="show"
             label=""
             reference="Applications"
-            target="appId"
+            target="organizationId"
           >
             <SimpleList
               className={classes.root}
