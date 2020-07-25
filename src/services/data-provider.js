@@ -38,24 +38,30 @@ export default {
 
   getOne: (resource, params) => {
     const endpoint = endpoints(GET_ONE, resource, params);
-    return httpClient(endpoint.url).then(({ json }) => ({
-      data: endpoint.getData(json.data),
-    }));
+    return httpClient(endpoint.url)
+      .then(({ json }) => ({
+        data: endpoint.getData(json.data),
+      }))
+      .catch(Promise.reject);
   },
 
   getMany: (resource, params) => {
     const endpoint = endpoints(GET_MANY, resource, params);
-    return httpClient(endpoint.url).then(({ json }) => ({
-      data: endpoint.getData(json.data),
-    }));
+    return httpClient(endpoint.url)
+      .then(({ json }) => ({
+        data: endpoint.getData(json.data),
+      }))
+      .catch(Promise.reject);
   },
 
   getManyReference: (resource, params) => {
     const endpoint = endpoints(GET_MANY_REFERENCE, resource, params);
-    return httpClient(endpoint.url).then(({ json }) => ({
-      data: endpoint.getData(json.data, endpoint.target, endpoint.targetId),
-      total: json.data.pageInfo.totalRecord,
-    }));
+    return httpClient(endpoint.url)
+      .then(({ json }) => ({
+        data: endpoint.getData(json.data, endpoint.target, endpoint.targetId),
+        total: json.data.pageInfo.totalRecord,
+      }))
+      .catch(Promise.reject);
   },
 
   update: (resource, params) => {
@@ -76,18 +82,22 @@ export default {
     return httpClient(endpoint.url, {
       method: "POST",
       body: JSON.stringify(params.data),
-    }).then(({ json }) => ({
-      data: endpoint.getData(json.data),
-    }));
+    })
+      .then(({ json }) => ({
+        data: endpoint.getData(json.data),
+      }))
+      .catch(Promise.reject);
   },
 
   delete: (resource, params) => {
     const endpoint = endpoints(DELETE, resource, params);
     httpClient(endpoint.url, {
       method: "DELETE",
-    }).then(({ json }) => ({
-      data: endpoint.getData(json.data),
-    }));
+    })
+      .then(({ json }) => ({
+        data: endpoint.getData(json.data),
+      }))
+      .catch(Promise.reject);
   },
 
   deleteMany: (resource, params) => {
@@ -99,6 +109,8 @@ export default {
           method: "DELETE",
         }).then(({ json }) => result.push(endpoint.getData(json.data)))
       )
-    ).then(() => ({ data: result }));
+    )
+      .then(() => ({ data: result }))
+      .catch(Promise.reject);
   },
 };
