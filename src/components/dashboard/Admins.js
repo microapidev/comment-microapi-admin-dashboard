@@ -18,7 +18,7 @@ const Admins = (props) => {
   return (
     <Card variant="outlined">
       <Link to="/Admins" className={classes.root}>
-        <Box display="flex" justifyContent="space-between" py={2} px={1}>
+        <Box display="flex" justifyContent="space-between" p={2}>
           <AdminsIcon color="action"></AdminsIcon>
           <Box textAlign="right">
             <Typography color="textPrimary">Admins</Typography>

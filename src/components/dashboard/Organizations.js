@@ -18,7 +18,7 @@ const Organizations = (props) => {
   return (
     <Card variant="outlined">
       <Link to="/Organizations" className={classes.root}>
-        <Box display="flex" justifyContent="space-between" py={2} px={1}>
+        <Box display="flex" justifyContent="space-between" p={2}>
           <OrganizationIcon color="action"></OrganizationIcon>
           <Box textAlign="right">
             <Typography color="textPrimary">Organizations</Typography>
