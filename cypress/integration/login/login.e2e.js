@@ -32,7 +32,7 @@ describe("Login Page", () => {
     });
 
     it("should have the inputted password value", () => {
-      cy.get("#username")
+      cy.get("#password")
         .type("fakepassword")
         .should("have.value", "fakepassword");
     });
