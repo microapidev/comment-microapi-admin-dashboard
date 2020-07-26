@@ -26,7 +26,8 @@
     "deploy": "gh-pages -d build",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test:e2e": "start-server-and-test 3000 cy:run"
+    "test:e2e": "start-server-and-test 3000 cy:run",
+    "test:e2e:ci": "start-server-and-test 3000 cy:run && cat ./coverage/lcov.info | coveralls"
   },
   "eslintConfig": {
     "extends": "react-app"
