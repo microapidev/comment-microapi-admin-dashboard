@@ -9,35 +9,32 @@ import {
   ReferenceField,
 } from "react-admin";
 
-const ApplicationPagination = (props) => (
+const SubscriptionPagination = (props) => (
   <Pagination rowsPerPageOptions={[10, 25, 50]} {...props} />
 );
 
-const ApplicationList = (props) => {
+const SubscriptionList = (props) => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   return (
     <List
-      label="Applications"
-      title="Applications"
-      pagination={<ApplicationPagination />}
+      label="Subscriptions"
+      title="Subscriptions"
+      pagination={<SubscriptionPagination />}
       {...props}
     >
       {isSmall ? (
-        <SimpleList
-          linkType="show"
-          primaryText={(record) => record.applicationName}
-        />
+        <SimpleList linkType="show" primaryText={(record) => record.planName} />
       ) : (
         <Datagrid rowClick="show">
-          <TextField label="Name" source="applicationName" />
+          <TextField label="Plan" source="planName" />
           <ReferenceField
             link="show"
-            label="Organization"
-            source="orgId"
-            reference="organizations"
+            label="Application"
+            source="appId"
+            reference="applications"
           >
-            <TextField label="Organization Name" source="organizationName" />
+            <TextField label="Application" source="applicationName" />
           </ReferenceField>
         </Datagrid>
       )}
@@ -45,4 +42,4 @@ const ApplicationList = (props) => {
   );
 };
 
-export default ApplicationList;
+export default SubscriptionList;

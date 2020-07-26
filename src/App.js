@@ -6,6 +6,7 @@ import services from "./services";
 import msadmins from "./components/msadmins";
 import organizations from "./components/organizations";
 import applications from "./components/applications";
+import subscriptions from "./components/subscriptions";
 import plans from "./components/plans";
 import settings from "./components/settings";
 import profile from "./components/profile";
@@ -21,11 +22,12 @@ function App() {
       ]}
       {...services}
     >
-      <Resource name="Admins" {...msadmins} />
-      <Resource name="Organizations" {...organizations} />
-      <Resource name="Applications" {...applications} />
-      <Resource name="Plans" {...plans} />
-      <Resource name="Settings" {...settings} />
+      <Resource name="admins" {...msadmins} />
+      <Resource name="organizations" {...organizations} />
+      <Resource name="applications" {...applications} />
+      <Resource name="subscriptions" {...subscriptions} />
+      <Resource name="plans" {...plans} />
+      <Resource name="settings" {...settings} />
       <Resource name="profile" />
     </Admin>
   );

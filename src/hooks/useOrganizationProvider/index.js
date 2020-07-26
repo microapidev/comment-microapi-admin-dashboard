@@ -7,7 +7,7 @@ export default () => {
 
   useEffect(() => {
     dataProvider
-      .getList("Organizations")
+      .getList("organizations")
       .then((data) => setOrganizationCount(data ? data.total : 0));
   }, [organizationCount, dataProvider]);
 

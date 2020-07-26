@@ -2,19 +2,22 @@ import adminEndpoints from "./admin-endpoints";
 import settingsEndpoints from "./settings-endpoints";
 import organizationsEndpoints from "./organizations-endpoints";
 import applicationEndpoints from "./application-endpoints";
+import subscriptionEndpoints from "./subscription-endpoints";
 import plansEndpoints from "./plans-endpoints";
 
 export default (type, resource, params) => {
   switch (resource) {
-    case "Admins":
+    case "admins":
       return adminEndpoints(type, params);
-    case "Settings":
+    case "settings":
       return settingsEndpoints(type, params);
-    case "Organizations":
+    case "organizations":
       return organizationsEndpoints(type, params);
-    case "Applications":
+    case "applications":
       return applicationEndpoints(type, params);
-    case "Plans":
+    case "subscriptions":
+      return subscriptionEndpoints(type, params);
+    case "plans":
       return plansEndpoints(type, params);
     default:
       return "";
