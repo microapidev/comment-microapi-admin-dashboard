@@ -1,26 +1,29 @@
 import React from "react";
 import { useMediaQuery } from "@material-ui/core";
-import {
-  List,
-  Datagrid,
-  TextField,
-  SimpleList,
-  Pagination,
-  ReferenceField,
-} from "react-admin";
-
-const ApplicationPagination = (props) => (
-  <Pagination rowsPerPageOptions={[10, 25, 50]} {...props} />
-);
+import { List, Datagrid, TextField, SimpleList } from "react-admin";
+import Pagination from "../pagination/Pagination";
+import Filter from "../pagination/Filter";
 
 const ApplicationList = (props) => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const filters = [
+    {
+      label: "Filter by name",
+      source: "applicationName",
+      alwaysOn: true,
+    },
+    {
+      label: "Filter by organization",
+      source: "organizationName",
+    },
+  ];
 
   return (
     <List
       label="Applications"
       title="Applications"
-      pagination={<ApplicationPagination />}
+      pagination={<Pagination />}
+      filters={<Filter filters={filters} />}
       {...props}
     >
       {isSmall ? (
@@ -31,14 +34,7 @@ const ApplicationList = (props) => {
       ) : (
         <Datagrid rowClick="show">
           <TextField label="Name" source="applicationName" />
-          <ReferenceField
-            link="show"
-            label="Organization"
-            source="orgId"
-            reference="Organizations"
-          >
-            <TextField label="Organization Name" source="organizationName" />
-          </ReferenceField>
+          <TextField label="Organization Name" source="organizationName" />
         </Datagrid>
       )}
     </List>

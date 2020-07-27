@@ -1,26 +1,29 @@
 import React from "react";
 import { useMediaQuery } from "@material-ui/core";
-import {
-  List,
-  Datagrid,
-  TextField,
-  EmailField,
-  SimpleList,
-  Pagination,
-} from "react-admin";
-
-const OrganizationPagination = (props) => (
-  <Pagination rowsPerPageOptions={[10, 25, 50]} {...props} />
-);
+import { List, Datagrid, TextField, EmailField, SimpleList } from "react-admin";
+import Pagination from "../pagination/Pagination";
+import Filter from "../pagination/Filter";
 
 const OrganizationList = (props) => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const filters = [
+    {
+      label: "Filter by name",
+      source: "organizationName",
+      alwaysOn: true,
+    },
+    {
+      label: "Filter by email",
+      source: "organizationEmail",
+    },
+  ];
 
   return (
     <List
       label="Organizations"
       title="Organizations"
-      pagination={<OrganizationPagination />}
+      pagination={<Pagination />}
+      filters={<Filter filters={filters} />}
       {...props}
     >
       {isSmall ? (
